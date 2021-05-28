@@ -1,5 +1,13 @@
 <h1>Movie List</h1>
 
-<% @lists.each do |list| %>
-  <%= link_to list.name, list_path(list) %>
-<% end %>
+<ul>
+  <% @lists.each do |list| %>
+    <li> <%= link_to list.name, list_path(list) %> </li>
+  <% end %>
+</ul>
+
+<%# <h1>Create a new list of movies:</h1>
+<%= simple_form_for (@list) do |f| %>
+  <%# <%= f.input :name, placeholder: "Horror" %>
+  <%# <%= f.submit class: "btn btn-flat" %>
+<%# <% end %> 
